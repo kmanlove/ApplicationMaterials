@@ -1,0 +1,693 @@
+\documentclass[9pt]{article}
+\usepackage{calc}
+\reversemarginpar
+\usepackage[paper=letterpaper,
+            marginparwidth=.5in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=.7in,               % 1 inch margins
+            includemp]{geometry}
+
+%\documentclass{article}
+%\usepackage{fontspec}
+%\setsansfont[Ligatures=TeX]{Arial Narrow}
+%\begin{document}
+%\end{document}
+
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+%\fontfamily{phv}\fontseries{mc}\selectfont
+
+\setlength{\parindent}{0in}
+\usepackage{paralist} 
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.25\textwidth+0.25\marginparsep+0.25\marginparwidth-1.5in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{3.5in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1]}{\end{itemize}%
+%        \vspace{.02\baselineskip}}
+         }
+
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{compactitem}[#1]}{\end{compactitem}}
+
+% The title (name) with a horizontal rule under it
+%
+% Usage: \makeheading{name}
+%
+% Place at top of document. It should be the first thing.
+
+\begin{document}
+\sffamily 
+
+\centerline{\textbf{\large{Kezia R. Manlove}}}
+
+%\newline
+
+\newlength{\rcollength}\setlength{\rcollength}{1.85in}%
+%
+%\begin{table}
+%\centering
+\begin{center}
+%\begin{tabular}[t]{l p{\textwidth-\rcollength}p{\rcollength}}
+\begin{tabular}[t]{c c}
+
+     15 E. Mason Street Apt. A  & \textit{Phone:} (406) 600-2369 \\
+			Bozeman, MT,  59715, USA  & \textit{E-mail:} kezia.manlove@gmail.com\\
+	
+\end{tabular}
+\end{center}
+%\end{table}
+
+%\newline
+
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                {\large \bfseries #1}\\[-0.025\baselineskip]%
+                 \rule{\columnwidth}{1.0pt}%
+         \end{minipage}} 
+
+\makeheading{Education}
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{list}{#1}{%
+        \setlength{\partopsep}{-.50pt}%
+        \setlength{\topsep}{-.50pt}}}
+        {\end{list}\vspace{-.025\baselineskip}}
+        
+
+%\begin{tabular}{p{.5cm} p{15cm}}
+%\hspace{-1.75cm} \textit{2012-} & \hspace{-.5cm} & \textbf{Doctoral Student, Penn State}, State College, PA and Bozeman, MT \\
+%\end{tabular}
+%\begin{innerlist}
+%        \item[] \textbf{\textit{Biology}}
+%        \item[] Research: Pneumonia dynamics in bighorn sheep (Advisor Dr. Peter Hudson)
+%        \end{innerlist}
+        
+\begin{outerlist}
+  \item[] \textbf{Ph.D. Candidate, Penn State}, State College, PA and Bozeman, MT 
+        \begin{innerlist}
+        \item[] \textbf{\textit{Biology}}, In progress 
+        \item[] Research: Pneumonia dynamics in bighorn sheep (Advisor Dr. Peter Hudson)
+        \end{innerlist}
+
+\item[] \textbf{M.S., Montana State University}, Bozeman, MT 
+        \begin{innerlist}
+        \item[] \textbf{\textit{Statistics}},  May, 2010
+        \item[] Research: Investigation of Guillot's Model for Landscape Genetics (Advisor Dr. Megan Higgs)
+
+        \end{innerlist}
+
+\item[] \textbf{B.A., St. Olaf College}, Northfield, MN
+        \begin{innerlist}
+        \item[] \textbf{\textit{Biological Modeling for a Sustainable Earth}}, May, 2006
+        \item[] \emph{Cum Laude}; Statistics concentration 
+        \end{innerlist}
+\end{outerlist}
+
+\makeheading{Research Experience}
+
+
+\vspace{.15in}
+\begin{tabbing}
+\hspace*{.25cm}\=\hspace*{.25cm}\= \kill
+\hspace{-1.5cm}\footnotesize{\textit{2012- }} \> \textbf{Pennsylvania State University}, 
+Bozeman, MT and State College, PA
+\end{tabbing}
+\begin{outerlist}
+  \item[] \textit{University Graduate Fellow, 2012-2013} 
+		\begin{innerlist}
+						\vspace{.05in}
+			\item[-] Spatial and behavioural ecology of bighorn sheep vis-a-vis pneumonia transmission in the wild
+		\end{innerlist}
+\vspace{.05in}
+
+  \item[] \textit{Academic Computing Fellow, 2013-2014}
+		\begin{innerlist}
+						\vspace{.05in}
+			\item[-] Application of Partially Observed Markov
+				Process (``pomp''') models in wildlife disease
+				ecology
+		\end{innerlist}
+	\end{outerlist}
+  
+  \begin{tabbing}
+\hspace*{.25cm}\=\hspace*{.25cm}\= \kill
+\hspace{-1.5cm}\footnotesize{\textit{2010- }} \> \textbf{Western Transportation Institute, Montana State University}, 
+Bozeman, MT
+\end{tabbing}
+
+\begin{outerlist}
+%  \item[] \textit{Research Scientist}
+%	  \begin{innerlist}
+	
+%	\end{innerlist}
+  \item[] \textit{Statistical Consultant}
+  	\begin{innerlist}
+						\vspace{.05in}
+			\item[-] Analysed data, wrote and revised manuscripts for peer-review, aided in grant writing, and assisted with outreach for an industrial engineering lab focused on evaluating highway safety in the state of Montana.  
+%			\vspace{.05in}
+%			\item[-] Work resulted in one published manuscript and one currently under review, as well as a successful grant application to study the efficacy of Montana's seatbelt enforcement policies.
+      \vspace{.05in}
+      \item[-] All work conducted under the supervision of Dr. Laura Stanley, laura.stanley $<$at$>$ coe $<$dot$>$ montana $<$dot$>$ edu
+
+		\end{innerlist}
+	\end{outerlist}
+
+
+\begin{tabbing}
+\hspace*{.25cm}\=\hspace*{.25cm}\= \kill
+\hspace{-1.5cm}\footnotesize{\textit{2010-2012 }} \> \textbf{Pennsylvania State University}, 
+Bozeman, MT and State College, PA
+\end{tabbing}
+
+\begin{outerlist}
+	\item[] \textit{Statistical Consultant/Research Assistant I} 
+		\begin{innerlist}
+						\vspace{.05in}
+			\item[-] Generated hypotheses, planned and implemented statistical models, wrote and revised articles for peer review with a research team focussed on theoretical approaches to disease modeling with applications to epidemic disease in bighorn sheep, and epidemic/endemic disease dynamics and spillover in Australian bats
+			\vspace{.05in}
+			\item[-] Models fit included mechanistic SEIR-inspired models with seasonality and varying forces of infection, phenomenological models for parameter estimation including semiparametric survival models with shared frailty, generalized linear mixed models with various response and random effects structures, and power analyses
+  \vspace{.05in}
+  \item[-] All work conducted under the supervision of Dr. Raina Plowright, rplowright $<$at$>$ gmail $<$dot$>$ com, Dr. Peter Hudson, pjh17 $<$at$>$ psu $<$dot$>$ edu, and Dr. Frances Cassirer
+		\end{innerlist}
+	\end{outerlist}
+
+
+
+\begin{tabbing}
+\hspace*{.25cm}\=\hspace*{.25cm}\= \kill
+\hspace{-1.5cm}\footnotesize{\textit{2010-2011 }} \> \textbf{Yellowstone Ecological Research Center}, 
+Bozeman, MT
+\end{tabbing}
+
+\begin{outerlist}
+	\item[] \textit{Ecological Statistician} 
+		\begin{innerlist}
+			\item[-] Wrote R scripts called through ArcGIS that allowed Arc user to access generalized linear mixed modeling approaches through a user-friendly GUI interface
+      \vspace{.05in}
+      \item[-] All work conducted under the supervision of Dr. Bob Crabtree, crabtree $<$at$>$ yellowstoneresearch $<$dot$>$ org
+		\end{innerlist}
+	\end{outerlist}
+
+
+
+\begin{tabbing}
+\hspace*{.25cm}\=\hspace*{.25cm}\= \kill
+\hspace{-1.5cm}\footnotesize{\textit{2009 }} \> \textbf{Big Sky Institute}, 
+Bozeman, MT
+\end{tabbing}
+
+\begin{outerlist}
+
+	\item[] \textit{Graduate Research Assistant}
+		\begin{innerlist}
+			\item[-] Designed and implemented power analysis for water quality monitoring program for Greater Yellowstone Network, and provided recommendations on sampling frequencies to the National Park Service
+     \vspace{.05in}
+      \item[-] All work conducted under the supervision of Dr. Kathi Irvine, kirvine $<$at$>$ usgs $<$dot$>$ gov
+		\end{innerlist}
+	\end{outerlist}
+
+
+\begin{tabbing}
+\hspace*{.25cm}\=\hspace*{.25cm}\= \kill
+\hspace{-1.5cm}\footnotesize{\textit{2006-2007 }} \> \textbf{Montana State University Department of Ecology}, 
+Bozeman, MT
+\end{tabbing}
+\begin{outerlist}
+	\item[] \textit{Graduate Research Assistant} 
+		\begin{innerlist}
+			\item[-] Performed and assisted in design of bias assessment for mixed stock fisheries program ONCOR
+		\end{innerlist}
+	\end{outerlist}
+
+
+\begin{tabbing}
+\hspace*{.25cm}\=\hspace*{.25cm}\= \kill
+\hspace{-1.5cm}\footnotesize{\textit{2004-2006 }} \> \textbf{Saint Olaf College}, 
+Northfield, MN
+\end{tabbing}
+
+		\begin{outerlist}
+			\item []\textit{Undergraduate Researcher}
+\begin{innerlist}
+	\item[-] Worked on several small research problems (an assessment of obesity in developing nations based on data provided by the World Health Organization, and an examination of tundra swan nest success at Izembek National Wildlife Refuge in Cold Bay, AK) that culminated with presentations at undergraduate research symposia
+  \vspace{.05in}
+  \item[-] All work conducted under the supervision of Dr. Julie Legler, legler $<$at$>$ stolaf $<$dot$>$ edu, and Dr. Joel Reynolds
+\end{innerlist}
+\end{outerlist}
+\vspace{.15in}
+
+%\makeheading{Selected Consulting Experience}
+
+%\begin{outerlist}
+%  \item[]\textit{Soil Quality Assessment for MT}
+%	\item[]\textit{Assessment of a driver training program in driving performance for young drivers} with Dr. Laura Stanley and Jessica Mueller, Western Transportation Institute (March 2010 to December 2011)
+%	\item[]\textit{Body Image Perceptions in Toddlers} with Lena May-Fraser (November 2008)
+%\end{outerlist}
+%\vspace{.05in}
+\makeheading{Publications}
+
+\vspace{.15in}
+
+\begin{tabular}{p{.5cm} p{15cm}}
+\hspace{-1.75cm} \footnotesize{\textit{2013}} & \hspace{-.5cm} Plowright, R.K.,\textbf{ K.R. Manlove}, E.F. Cassirer, P.C.Cross, T. Besser, P.J. Hudson. 
+  ``Exposure history and pneumonia-induced mortality in a spatially-structured, age-structured bighorn sheep (\textit{Ovis canadensis}) population.'' (accepted, \textit{PLoS One}) \\ 
+  \\
+  & \hspace{-.5cm} Cross, P.C., T.G. Creech, M.R. Ebinger, \textbf{K.R. Manlove}, K. Irvine, E. Maichak, H. Henningsen, J. Rogerson, B.M. Scurlock, S. Creel.  ``Not quite molecules in solution: Elk contact rates as a function of group size.''  (accepted, \textit{Ecology}) \\
+  \\
+  & \hspace{-.5cm} Cassirer, E.F., R.K. Plowright, \textbf{K.R. Manlove}, P.C. Cross, A. Dobson, K. Potter, P.J. Hudson.  ``Spatio-temporal dynamics of pneumonia in bighorn sheep (\textit{Ovis canadensis}).'' \textit{Journal of Animal Ecology}, doi:10.1111/1365-2656.12031 \\
+  \\
+\hspace{-1.75cm}  \footnotesize{\textit{2012}} & \hspace{-.5cm} Mueller, J., L. Stanley, and \textbf{ K.R. Manlove} (2012). ``Multi-stage defensive novice driver training program: Does it create overconfidence?''  \textit{Open Journal of Safety Science and Technology} \textbf{2}(4): 133-139. \\
+  \\ 
+  & \hspace{-.5cm} Irvine, K. M., \textbf{K. Manlove}, and C. Hollimon (2012). ``Power analysis and trend detection for water quality monitoring data: An application for the Greater Yellowstone Inventory and Monitoring Network.'' \textit{Natural Resource Report} NPS/GRYN/NRR—2012/556. National Park Service, Fort Collins, Colorado. \\
+  \end{tabular}
+  
+%\begin{outerlist}
+%% \item[] Plowright, Cassirer, \textbf{Manlove}.  Sampling to detect bighorn sheep pneumonia.  
+%%	\item[] Plowright, R.K., P. Foley,\textbf{ K.R. Manlove}, J.Foley,. ``Disease dynamics in reservoir hosts: superspreader individuals, superspreader populations and disease emergence.''  (in preparation)
+%  \item[] Plowright, R.K.,\textbf{ K.R. Manlove}, E.F. Cassirer, P.C.Cross, T. Besser, P.J. Hudson. 
+%  ``Exposure history and pneumonia-induced mortality in a spatially-structured, age-structured bighorn sheep (\textit{Ovis canadensis}) population.'' (in review, PLoS One)
+%  \item[] Cross, P.C., T.G. Creech, M.R. Ebinger, \textbf{K.R. Manlove}, K. Irvine, E. Maichak, H. Henningsen, J. Rogerson, B.M. Scurlock, S. Creel.  ``Not quite molecules in solution: Elk contact rates as a function of group size.''  (in revision, Ecology)
+%    \item[] Cassirer, E.F., R.K. Plowright, \textbf{K.R. Manlove}, P.C. Cross, A. Dobson, K. Potter, P.J. Hudson.  ``Spatio-temporal dynamics of pneumonia in bighorn sheep (\textit{Ovis canadensis}).''  (in press, Journal of Animal Ecology)
+%  \item[] Mueller, J., L. Stanley, and \textbf{ K.R. Manlove} (2012). ``Multi-stage defensive novice driver training program: Does it create overconfidence?''  \textit{Open Journal of Safety Science and Technology} \textbf{2}(4): 133-139.
+%% \item[] Stanley, L., J. Mueller, \textbf{K.R. Manlove}, J. Hartos. (In Press). ``A Model to Predict at-Risk Drivers Using Driver Training Metrics.''
+% \item[] Irvine, K. M., \textbf{K. Manlove}, and C. Hollimon (2012). ``Power analysis and trend detection for water quality monitoring data: An application for the Greater Yellowstone Inventory and Monitoring Network.'' \textit{Natural Resource Report} NPS/GRYN/NRR—2012/556. National Park Service, Fort Collins, Colorado. 
+
+%\end{outerlist}
+\vspace{.15in}
+
+\makeheading{Technical Reports}
+\vspace{.15in}
+
+\begin{tabular}{p{.5cm} p{15cm}}
+\hspace{-1.75cm} \footnotesize{\textit{2011}} & \hspace{-.5cm} \textit{EAGLES Manual}. (\textbf{K.Manlove}, D. Weiss, J.Sheldon; 2011).  Report submitted with NASA-RRSC grant deliverables via Yellowstone Ecological Research Center \\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2009}} & \hspace{-.5cm} \textit{Investigation of a Bayesian Hierarchical Model for Landscape Genetics} (\textbf{K. Manlove}; 2009). MSU master's writing project \\
+\\
+& \hspace{-.5cm}\textit{Water Quality Power Analysis for the Greater Yellowstone Network}. (\textbf{K. Manlove} and K. Irvine; 2009) 
+\end{tabular}
+
+\begin{tabular}{p{.5cm} p{15cm}}
+
+&  \hspace{-.5cm}\textit{Power Analysis Tutorial for the Greater Yellowstone Network Watershed} (\textbf{K. Manlove} and K. Irvine; 2009) \\
+\\
+
+\hspace{-1.75cm} \footnotesize{\textit{2007}} & \hspace{-.5cm}\textit{ONCOR: A Computer Program for Genetic Stock Identification}.(S. Kalinowski,\textbf{ K. Manlove}, M.L. Taper; 2007)  \\
+  
+\end{tabular}
+
+%\begin{outerlist}
+%	\item[]\textit{EAGLES Manual}. (\textbf{K.Manlove}, D. Weiss, J.Sheldon; 2011)
+%		 \begin{innerlist}
+%			\item[] Report submitted with NASA-RRSC grant deliverables via Yellowstone Ecological Research Center
+%		\end{innerlist}
+%
+%	\item[] \textit{Investigation of a Bayesian Hierarchical Model for Landscape Genetics} (\textbf{K. Manlove}; 2009)
+%	\begin{innerlist}
+%		\item[] MSU master's writing project	
+%	\end{innerlist}
+%
+%	\item[]\textit{Water Quality Power Analysis for the Greater Yellowstone Network}. (\textbf{K. Manlove} and K. Irvine; 2009) 
+%
+%	\item[] \textit{Power Analysis Tutorial for the Greater Yellowstone Network Watershed} (\textbf{K. Manlove} and K. Irvine; 2009)	
+%			
+%	\item[] \textit{ONCOR: A Computer Program for Genetic Stock Identification}.(S. Kalinowski,\textbf{ K. Manlove}, M.L. Taper; 2007) 
+%	
+%	\end{outerlist}
+%  \vspace{.15in}
+  
+%\makeheading{Invited Talks}
+%\vspace{.15in}
+%
+%\begin{tabular}{p{.5cm} p{15cm}}
+%\hspace{-1.75cm} \footnotesize{\textit{2013}} & \hspace{-.5cm}Saint Olaf College Center for Integrative Research Seminar Series \textit{(Scheduled March 4)} \\
+%\\
+%& \hspace{-.5cm}Saint Olaf College Biostatistics Guest Lecturer \textit{(Scheduled March 4)}\\
+%\end{tabular}%
+
+%  \begin{outerlist}
+%    \item[] Saint Olaf College Center for Integrative Research Seminar Series \textit{(Scheduled March 4, 2013)}
+%    \item[] Saint Olaf College Biostatistics Guest Lecturer \textit{(Scheduled March 4, 2013)}
+%  \end{outerlist}
+	\vspace{.15in}
+  
+\makeheading{Professional Presentations}
+\vspace{.15in}
+
+\begin{tabular}{p{.5cm} p{15cm}}
+\hspace{-1.75cm} \footnotesize{\textit{2013}} & \hspace{-.5cm}\textit{Effects of Pneumonia on bighorn sheep populations in Hells Canyon} \\
+& E.F. Cassirer, R.K. Plowright, \textbf{K.R. Manlove}, P.C. Cross, A.P. Dobson, P.J. Hudson \\
+& The Wildlife Society National Meeting (Portland, OR)\\
+\\
+& \hspace{-.5cm}\textit{Long term patterns  of pneumonia in a bighorn sheep metapopulation}\\
+& P.J. Hudson, E.S. Almberg, R.K. Plowright, \textbf{K.R. Manlove}, P.C. Cross, C. Aiello\\
+& Intecol London, (August) \\
+\\
+& \hspace{-.5cm}\textit{Linking adult social connectivity patterns to offspring mortality in bighorn sheep}\\
+& \textbf{K.R. Manlove}\\
+& CIDD Seminar Series, Penn State (October 4) \\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2012}} & \hspace{-.5cm}\textit{Effects of Pneumonia on bighorn sheep populations in Hells Canyon} \\
+& K. Potter, E.F. Cassirer, R.K. Plowright, \textbf{K.R. Manlove}, P.C. Cross, A.P. Dobson, P.J. Hudson \\
+& American College of Veterinary Pathologists (December)\\
+\\
+& \hspace{-.5cm}\textit{Long term patterns  of pneumonia in a bighorn sheep metapopulation}\\
+& E.F. Cassirer, R.K. Plowright, \textbf{K.R. Manlove}, K. Potter, P.C. Cross, P.J. Hudson\\
+& The Wildlife Society National Meeting, Portland, OR (October) \\
+\\
+& \hspace{-.5cm}\textit{Model selection in ecology: an on-going debate }\\
+& \textbf{K.R. Manlove}\\
+& EcoLunch, USGS Northern Rocky Mountain Science Center (May 1)\\
+\\
+& \hspace{-.5cm}\textit{Infection and immunity in a bighorn sheep metapopulation: Dynamics of pneumonia }\\
+& \textbf{K.R. Manlove}, R.K. Plowright, E.F. Cassirer\\
+& The Wildlife Society Montana Chapter Meeting (February 28)\\
+\\
+& \hspace{-.5cm}\textit{Infection and immunity in a bighorn sheep metapopulation}\\
+& R.K. Plowright, E.F. Cassirer, \textbf{K.R. Manlove},T. Besser, P.C. Cross, P.J. Hudson\\
+& Northern wild sheep and goat council biennial meeting, Kamloops, BC, (March 12)\\
+\\
+& \hspace{-.5cm}\textit{The short and long of it: pneumonia in a bighorn sheep metapopulation}\\
+& Cassirer, E.F., R.K. Plowright, \textbf{K.R. Manlove}, K. Potter, P.C. Cross, P.J. \\
+& Northern wild sheep and goat council biennial meeting, Kamloops, BC (March 12)\\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2011}} & \hspace{-.5cm}\textit{Connectivity and the spread of infectious diseases in wildlife}\\
+& Plowright, R.K., E.F. Cassirer, P.C. Cross, \textbf{K.R. Manlove}, P.J. Hudson\\
+& Ecological Society of America Annual Meeting, Austin, TX (August 18)\\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2010}} & \hspace{-.5cm}\textit{A Closer Look at Models Developed for Landscape Genetics}\\
+& \textbf{K.R. Manlove} and M.D. Higgs\\
+& Joint Statistical Meetings, Vancouver, BC (August 2)\\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2009}} & \hspace{-.5cm}\textit{Power Analysis Performance and Interpretation}\\
+& \textbf{K.R. Manlove} and K. Irvine\\
+& Greater Yellowstone Network Water Quality Analysts (July 1) \\
+\\
+\\
+\end{tabular}
+
+\begin{tabular}{p{.5cm} p{15cm}}
+
+& \hspace{-.5cm}\textit{Investigation of a Hierarchical Model for Landscape Genetics}\\
+& \textbf{K.R. Manlove}\\
+& Montana State University Department of Mathematical Sciences (April 18)\\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2008}} & \hspace{-.5cm}\textit{Stochastic Processes in Biological Modeling}\\
+& \textbf{K.R. Manlove}\\
+& St. Olaf College Center for Undergraduate Research (December 1) \\
+\\
+& \hspace{-.5cm}\textit{Investigation of a Bayesian Hierarchical Model for Landscape Genetics}\\
+& \textbf{K.R. Manlove} and M.D. Higgs\\
+& American Statistical Association Montana Chapter Meeting (September 17) \\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2007-2010}}& \hspace{-.5cm}\textit{Montana State University Dynalite Series}\\
+& Plotting in the \texttt{R} Environment (February 22, 2010) \\
+& Bayesian vs. Frequentist Approaches to Spatial Modeling (March 23, 2009) \\
+& Voronoi Tilings for Spatial Modeling (March 14, 2008) \\
+& Expectation-Maximization Algorithm for Analyzing Mixtures (December 4, 2007) \\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2006}} & \hspace{-.5cm}\textit{Tundra Swan Nest Productivity}\\
+& \textbf{K.R. Manlove}, J. Legler and J. Reynolds\\
+& Council for Undergraduate Research Annual Meeting (March 24) \\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2005}} & \hspace{-.5cm}\textit{Body Mass Index as a Function of Income in Developing Economies}\\
+& \textbf{K.R. Manlove}, K. Kephart\\
+& Council for Undergraduate Research Posters on the Hill (February 14) \\
+\end{tabular}
+
+\vspace{.15in}
+
+%{\textbf{St. Olaf College}}, Northfield, MN \textit{Laboratory Teaching Assistant}
+		\vspace{.05in}
+
+%	\begin{outerlist}
+%  \item[] \textit{Assessing long-term tundra swan nest productivity: Izembek NWR, Alaska}
+%			\begin{innerlist}
+%				\item[-] Cleaned and performed preliminary analysis on 30-year tundra swan dataset.
+%			\end{innerlist}
+%		\item[] \textit{Chronic disease data preparation, World Health Organization: Geneva, Switzerland, January 2005}
+%			\begin{innerlist}
+%				\item[-] Assisted with cleaning and analysis of data on chronic disease indicators in developing nations.
+%			\end{innerlist}
+%		
+%	\end{outerlist}
+\vspace{.15in}
+
+\makeheading{Grants}
+
+\vspace{.15in}
+
+\begin{tabular}{p{.5cm} p{15cm}}
+\hspace{-1.75cm} \footnotesize{\textit{2013}} & \hspace{-.5cm}\textbf{Assessing the effectiveness of Montana's Occupant Protection Program}, Montana Department of Transportation, L. Stanley (Principal Investigator) and \textbf{K. Manlove} (Co-Investigator), \$91,249 \\
+% & Manlove Subaward: \$3,000 \\
+ 
+\end{tabular}
+\vspace{.15in}
+
+\makeheading{Outreach}
+\vspace{.15in}
+
+\begin{tabular}{p{.5cm} p{15cm}}
+\hspace{-1.75cm} \footnotesize{\textit{2012}} & \hspace{-.5cm}\textbf{Challenges to conservation: Infection and immunity in wildlife metapopulations}\\
+& \textit{Penn State's Center for Infectious Disease Dynamics, October 5-7} \\
+& \hspace{.5cm}20 participating scientists from across the US\\
+& \hspace{.5cm}\textbf{Objective:} brainstorm and plan approaches for exploring pneumonia epidemics in bighorn sheep\\
+& Assistant host and organizer (set up facility, organized transportation and lodging, designed and produced statistical and scientific materials, kept notes, and assisted in meeting moderation)\\
+
+\end{tabular}
+%  \begin{outerlist}
+%  \item[] \textit{CIDD Graduate Student Group Volunteer}
+%    \begin{innerlist} 
+%      \item[] Great Insect Fair, 2012 (Pennsylvania State University Department of Entomology)
+%    \end{innerlist}
+%	\item[] \textit{Challenges to conservation: Infection and immunity in wildlife metapopulations}
+%			\begin{innerlist}
+%				\item[-] Penn State's Center for Infectious Disease Dynamics, October 5-7, 2011
+%        \item[-] 20 participating scientists from across the US
+%        \item[-] Objective was to brainstorm and plan approaches for exploring pneumonia epidemics in bighorn sheep
+%        \item[-] Assistant host and organizer (set up facility, organized transportation and lodging for out-of-town guests, designed and produced statistical and scientific materials, kept notes, and assisted in meeting moderation)
+%			\end{innerlist}
+%	\end{outerlist}
+\vspace{.15in}
+
+%\makeheading{Grants}
+%  \begin{outerlist}
+%  \item[] \textit{Assessing the efficacy of Montana's seatbelt education and enforcement program} (in review)
+%			\begin{innerlist}
+%        \item[] Grantor: The State of Montana
+%				\item[] PI: Laura Stanley, Montana State University College of Engineering
+%        \item[] Co-I: Kezia Manlove (statistical analysis)
+%			\end{innerlist}
+%	\end{outerlist}
+%\vspace{.05in}
+
+\makeheading{Continuing Education}
+	
+\vspace{.15in}
+
+\begin{tabular}{p{.5cm} p{15cm}}
+\hspace{-1.75cm} \footnotesize{\textit{2012}} & \hspace{-.5cm}\textbf{\textit{Mathematical modeling in ecology and epidemiology}}\\
+& Laramie, WY (hosted through the Rocky Mountain Mathematical Consortium)\\
+& June 11-20\\
+%& Jim Cushing, Glenn Webb, Sebastien Schreiber, Dan Doak, Carlos Martinez Del Rio, Libin Rong, Carlos Castillo-Chavez, Jia Li, Fred Alder, Zhilan Feng Instructors\\
+\\
+& \hspace{-.5cm}\textbf{\textit{Ecology and Evolution of Infectious Diseases (EEID) Ecology workshop}}\\
+& Ann Arbor, MI (May 19-22)\\
+%& Ben Bolker, Aaron King, Matt Ferrari, Helen Wearing, Jennie Lavine Instructors)\\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2011}} & \hspace{-.5cm}\textbf{\textit{Ecology and Evolution of Infectious Diseases (EEID) Ecology workshop}}\\
+& Santa Barbara, CA (June 22-26)\\
+%& 2011; Ben Bolker, Aaron King, Matt Ferrari, John Drake, Helen Wearing Instructors)
+\\
+& \hspace{-.5cm}\textbf{\textit{Winter Ecology}}\\
+& Yellowstone Association Institute (January 17-18) \\
+%& James Halfpenny, Instructor\\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2010}} & \hspace{-.5cm}\textbf{\textit{Modeling Longitudinal Data using Antedependent Models}}\\
+& Joint Statistical Meetings (August 3rd) \\
+%& Dale Zimmerman, Instructor \\
+\end{tabular}
+
+%	\begin{outerlist}
+%			\item[] \textit{Winter Ecology}
+%			\begin{innerlist}
+%				\item[-] Yellowstone Association Institute (January 17-18 2011; James Halfpenny, Instructor) 
+%			\end{innerlist}
+%			\item[] \textit{Modeling Longitudinal Data using Antedependent Models}
+%			\begin{innerlist}
+%				\item[-] Joint Statistical Meetings (August 3rd, 2010; Dave Zimmerman, Instructor) 
+%			\end{innerlist}
+%				
+%		\end{outerlist}
+	
+\vspace{.05in}
+
+
+%  \begin{outerlist}
+%    \item[] Montana Department of Transportation, 2013-2014
+%      %\begin{innerlist}
+%%        \item[-] 
+%        \item[] L. Stanley (Principal Investigator) and \textbf{K. Manlove} (Co-Investigator)
+%  %      \item[-] Awarded 
+%        \item[] Manlove Subaward: \$3,000
+%    %  \end{innerlist}
+%  \end{outerlist}
+\vspace{.15in}
+
+\makeheading{Awards}
+\vspace{.15in}
+
+\begin{tabular}{p{.5cm} p{15cm}}
+\hspace{-1.75cm} \footnotesize{\textit{2013 - }} & \hspace{-.5cm}Academic
+	Computing Fellowship (Penn State)\\
+\hspace{-1.75cm} \footnotesize{\textit{2012}} & \hspace{-.5cm}University Graduate Fellowship (Penn State)\\
+& \hspace{-.5cm}Braddock Award (Penn State - Biology) \\
+& \hspace{-.5cm}Rocky Mountain Mathematics Consortium Travel Award (RMMC)\\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2009}} & \hspace{-.5cm}Outstanding Graduate Teaching Assistant (MSU-Mathematical Sciences)\\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2007-2008}} & \hspace{-.5cm}Pacific Salmon Commission Grantee (MSU-Ecology) \\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2002-2006}} & \hspace{-.5cm}St. Olaf College Dean's Scholar \\
+& \hspace{-.5cm}St. Olaf College Center for Integrative Research Grantee \\
+& \hspace{-.5cm}National Merit Scholar\\
+\end{tabular}
+
+%	\begin{outerlist}
+%    \item[] University Graduate Fellowship (Penn State, 2012-2013)
+%    \item[] Braddock Award (Penn State - Biology 2012-2013)
+%    \item[] Rocky Mountain Mathematics Consortium Travel Award (RMSC, 2012)
+%		\item[] Outstanding Graduate Teaching Assistant (MSU-Mathematical Sciences 2008-2009)
+%		\item[] Pacific Salmon Commission Grantee (MSU-Ecology 2006-2008)			
+%		\item[] St. Olaf College Dean's Scholar (St. Olaf College 2002-2005)	
+%		\item[]St. Olaf College Center for Integrative Research Grantee (St. Olaf College (2004-2006)
+%		\item[]National Merit Scholar (2002)
+%	\end{outerlist}
+	\vspace{.15in}
+
+\makeheading{Professional Affiliations}
+\vspace{.15in}
+
+  \begin{outerlist}
+  \item[] \textit{International Society of Infectious Diseases} Member (2013-present)
+	\item[] \textit{The Wildlife Society, Montana Chapter} Member (2012-present)
+  
+		\item[] \textit{American Statistical Association} Member (2006-present)
+			
+	\item[] \textit{American Statistical Association: Environmental Statistics Chapter} Member (2010-present)
+	\end{outerlist}
+\vspace{.15in}
+
+
+\makeheading{Field Experience}
+\vspace{.15in}
+
+\begin{tabular}{p{.5cm} p{15cm}}
+\hspace{-1.75cm} \footnotesize{\textit{2013-}} & \hspace{-.5cm}\textit{Quantifying bighorn sheep lamb-ewe group contacts: Asotin Creek, WA}\\
+& Designed sampling protocol to quantify behavioral changes in birhorn sheep ewe-lamb groups as lambs transition from neonates to independent individuals\\
+& Pilot study conducted June 25 - July 5, 2012; two six-week field seasons planned 2013-2014\\
+\\
+\hspace{-1.75cm} \footnotesize{\textit{2005}} & \hspace{-.5cm}\textit{Assessing long-term tundra swan nest productivity: Izembek NWR, Alaska}\\
+& Cleaned and performed preliminary analysis on 30-year tundra swan dataset\\
+\\
+& \hspace{-.5cm}\textit{Chronic disease data preparation, World Health Organization: Geneva, Switzerland, January 2005}\\
+& Assisted with cleaning and analysis of data on chronic disease indicators in developing nations\\
+\end{tabular}
+
+\vspace{.15in}
+
+\makeheading{Teaching Experience}
+
+\vspace{.15in}
+
+%{\textbf{Montana State University}}, Bozeman, MT
+\begin{outerlist}
+  \item[] \textit{Teaching Assistant, Statistics 217} (Montana State University, January 2010 to May 2010)
+		\begin{innerlist}
+				\item[-] Planned, developed course materials, instructed, evaluated, and assigned grades for one unsupervised section of Intermediate Statistics
+			\end{innerlist}
+
+	\item[] \textit{Teaching Assistant, Statistics 216} (Montana State University, January 2009 to June 2010)
+		\begin{innerlist}
+				\item[-] Taught four regular term sections of Introductory Statistics; planned, developed course materials, instructed, evaluated, and assigned grades for two unsupervised summer term sections of Introductory Statistics
+			\end{innerlist}
+	\end{outerlist}
+
+\vspace{.15in}
+
+\makeheading{Programming Experience}
+\vspace{.15in}
+
+  \begin{outerlist}
+		\item[] \textit{Statistical Computing Environments}  R (primarily), JAGS/WinBUGS, SAS, Stata, SysStat 
+		\item[] \textit{Document Building Programs} LaTeX, Microsoft Office suite
+		\item[] \textit{Geographical Information Systems} ArcGIS
+    \item[] \textit{Artistic design} Inkscape, Adobe Illustrator
+    \item[] \textit{Operating systems} Linux, Windows
+	\end{outerlist}
+	\vspace{.15in}
+
+\makeheading{Volunteerism and Community Involvement} 
+\vspace{.15in}
+
+	\begin{outerlist}
+    \item[] \textit{Mentoring}
+      \begin{innerlist}
+        \item[-] Statistics MS Student Mentoring 
+          \begin{itemize}
+            \item Informally mentored a statistics MS student at Montana State
+		    University (2013-2014)
+            \item Provided feedback on abstract and manuscript development,
+		    programming practices, statistical techniques and communications
+          \end{itemize}
+      \end{innerlist}
+      \begin{innerlist}
+        \item[-] Saint Olaf College Career Network, 2012-2013
+          \begin{itemize}
+            \item Reviewed $\sim$ 20 undergraduate student personal statements and provided feedback
+            \item Provided students advice on moving forward with their career preparation
+          \end{itemize}
+      \end{innerlist}
+    \item[] \textit{General Science Outreach}
+      \begin{innerlist}
+        \item[-] Expanding Your Horizons volunteer, 2011-2012, Bozeman, MT
+        \item[-] Great Insect Fair volunteer, 2012, State College, PA
+        \item[-] ScienceU volunteer (outreach with middle school biology
+		students), 2013, State College, PA
+      \end{innerlist}
+		\item[] \textit{Bozeman Summer Ultimate Frisbee League}
+      \begin{innerlist}
+        \item[-] Director, 2011
+        \item[-] Captain/Associate Director 2010, 2012
+      \end{innerlist}
+\item[] \textit{Eagle Mount Ski Instructor} (taught alpine skiing to developmentally disabled adults) 2009
+		\item[] \textit{Graduate Student Organizing Committee Member} 
+      \begin{innerlist}
+        \item[-] Collaborated with a small group of students from across the university in coordinating intial efforts toward creation of a graduate student union at MSU
+        \item[-] 2007-2010
+			\end{innerlist}
+	\end{outerlist}
+  
+\end{document}
